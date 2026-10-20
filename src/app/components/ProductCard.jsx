@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const ProductCard = ({product}) => {
+const ProductCard = ({ product }) => {
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       {/* Product Image */}
@@ -43,12 +44,14 @@ const ProductCard = ({product}) => {
             ${product.price.toFixed(2)}
           </p>
 
-          <button
-            onClick={() => console.log("Added to cart:", product.id)}
-            className="rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700"
-          >
-            Add to Cart
-          </button>
+          <Link href={`/products/${product.id}`}>
+            <button
+              onClick={() => console.log("Added to cart:", product.id)}
+              className="rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700"
+            >
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
