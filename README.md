@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shoping
+
+A simple shopping demo built with [Next.js](https://nextjs.org) (App Router), Tailwind CSS v4, daisyUI + HeroUI, and [better-auth](https://www.better-auth.com/) with MongoDB. Product data comes from the [Fake Store API](https://fakestoreapi.com/).
+
+## Features
+
+- Home page with hero and featured products
+- Product list with search and sort by rating
+- Product details page
+- Sign up / sign in (email + password, backed by MongoDB)
+- Route protection: `/products` requires login
+- Responsive layout for mobile, tablet, and desktop
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create a `.env` file in the root:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+   ```env
+   BETTER_AUTH_SECRET=your-secret
+   BETTER_AUTH_URL=http://localhost:3000
+   BETTER_AUTH_MONGODB_URI=mongodb://localhost:27017/shoping
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Run the dev server:
 
-## Learn More
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command           | Description         |
+| ----------------- | ------------------- |
+| `npm run dev`     | Development server  |
+| `npm run build`   | Production build    |
+| `npm start`       | Serve the build     |
