@@ -28,8 +28,8 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="flex justify-center mt-[40px]">
-      <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+    <div className="mt-[40px] flex justify-center px-4">
+      <Form className="flex w-full max-w-96 flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="email"

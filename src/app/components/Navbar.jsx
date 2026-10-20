@@ -38,6 +38,20 @@ const Navbar = () => {
               tabIndex={-1}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
+              {session?.user ? (
+                <li>
+                  <button onClick={handleSignOut}>Logout</button>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <Link href="/sign-in">Sign In</Link>
+                  </li>
+                  <li>
+                    <Link href="/sign-up">Sign Up</Link>
+                  </li>
+                </>
+              )}
               <li>
                 <a>Item 1</a>
               </li>
@@ -82,14 +96,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-1 px-2 sm:gap-2 sm:px-4">
         {
             session?.user? 
             <>
                 <Button onClick={handleSignOut}>Logout</Button>
             </>:
             <>
-            <Link href="/sign-up"><Button>Sign Up</Button></Link>
+            <Link href="/sign-up" className="hidden sm:block"><Button>Sign Up</Button></Link>
             <Link href="/sign-in"><Button>Sign In</Button></Link>
             </>
         }

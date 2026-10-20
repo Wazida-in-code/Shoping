@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       {/* Product Image */}
-      <div className="flex h-56 items-center justify-center bg-gray-50 p-6">
+      <div className="flex h-44 items-center justify-center bg-gray-50 p-4 sm:h-56 sm:p-6">
         <Image
           src={product.image}
           alt={product.title}

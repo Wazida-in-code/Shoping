@@ -10,9 +10,9 @@ const Header = () => {
   }}
 >
   <div className="hero-overlay"></div>
-  <div className="hero-content text-neutral-content text-center">
+  <div className="hero-content text-neutral-content text-center px-4 sm:px-8">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+      <h1 className="mb-5 text-4xl font-bold sm:text-5xl">Hello there</h1>
       <p className="mb-5">
        Welcome To My Products House
       </p>

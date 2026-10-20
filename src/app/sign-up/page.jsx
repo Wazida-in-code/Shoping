@@ -32,7 +32,7 @@ const SignUpPage = () => {
   };
 
     return (
-        <div className="flex justify-center mt-[40px]">
+        <div className="mt-[40px] flex justify-center px-4">
             <Form className="w-full max-w-96" onSubmit={onSubmit}>
       <Fieldset>
         <Fieldset.Legend>Profile Settings</Fieldset.Legend>

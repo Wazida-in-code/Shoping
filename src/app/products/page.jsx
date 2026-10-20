@@ -10,8 +10,8 @@ const ProductsPage = () => {
             <div>
 
       <div>
-        <div className="flex justify-center my-13">
-          <h2 className="font-bold text-5xl">Feature Products</h2>
+        <div className="flex justify-center px-4 my-13">
+          <h2 className="text-center font-bold text-3xl sm:text-4xl md:text-5xl">Feature Products</h2>
         </div>
         <FilteredProduct products={products} />
         

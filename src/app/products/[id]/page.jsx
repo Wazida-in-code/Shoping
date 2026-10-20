@@ -26,7 +26,7 @@ const ProductDetailsId = async ({ params }) => {
           </div>
 
           {/* Product Information */}
-          <div className="flex flex-col justify-center py-4">
+          <div className="flex flex-col justify-center p-5 md:p-0 md:py-4">
             <span className="mb-4 w-fit rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium capitalize text-blue-700">
               {data.category}
             </span>
