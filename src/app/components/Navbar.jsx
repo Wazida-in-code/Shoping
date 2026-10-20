@@ -1,15 +1,18 @@
 'use client'
+import { OurContext } from "@/context/ContextProvider";
 import { signOut, useSession } from "@/lib/auth-client";
 import {
   Button
 } from "@heroui/react";
 import Link from "next/link";
+import { useContext } from "react";
 
 const Navbar = () => {
     const { data: session } = useSession();
     const handleSignOut = async() => {
         await signOut();
 }
+const name = useContext(OurContext)
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -61,7 +64,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <a>{name}</a>
             </li>
             <li>
               <details>
