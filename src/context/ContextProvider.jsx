@@ -1,12 +1,19 @@
 'use client'
-import React, { createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 export const OurContext = createContext();
 
 const ContextProvider = ({children}) => {
-    let demo = 'Tanha'
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products/')
+        .then(res => res.json())
+        .then(data => setProducts(data))
+        .catch(err => console.log(err))
+    }, [])
+    console.log(products);
     return (
-        <OurContext.Provider value={demo}>{children}</OurContext.Provider>
+        <OurContext.Provider value={products}>{children}</OurContext.Provider>
     );
 };
 
