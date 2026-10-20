@@ -11,9 +11,9 @@ const ContextProvider = ({children}) => {
         .then(data => setProducts(data))
         .catch(err => console.log(err))
     }, [])
-    console.log(products);
+    
     return (
-        <OurContext.Provider value={products}>{children}</OurContext.Provider>
+        <OurContext.Provider value={{products}}>{children}</OurContext.Provider>
     );
 };
 

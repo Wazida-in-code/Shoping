@@ -26,7 +26,7 @@ const SignUpPage = () => {
         name:data.name,
         email: data.email,
         password: data.password,
-        callbackURL: "/"
+        // callbackURL: "/"
     })
     console.log(signUpData);
   };
